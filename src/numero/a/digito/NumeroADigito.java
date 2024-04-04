@@ -29,7 +29,7 @@ public class NumeroADigito {
         } while (true);
 
         Funciones operacion = new Funciones(numero);
-        int separar = operacion.getInvertir();
+        int separar = operacion.getInvertir(numero, 0);
 
         int opcion;
         do {

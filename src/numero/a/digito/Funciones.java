@@ -21,17 +21,14 @@ public class Funciones {
         this.numero = numero;
     }
 
-    public int getInvertir() {
-        int invertido = 0;
-        int resto;
-
-        while (numero > 0) {
-            resto = numero % 10;
+    public int getInvertir(int numero, int invertido) {
+        if (numero == 0) {
+            return invertido;
+        } else {
+            int resto = numero % 10;
             invertido = invertido * 10 + resto;
-            numero /= 10;
+            return getInvertir(numero / 10, invertido);
         }
-
-        return invertido;
     }
 }
 
